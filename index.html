@@ -9,11 +9,11 @@
             background-color: black;
             color: white;
             font-family: Arial, sans-serif;
-            text-align: center;
             padding: 20px;
         }
         h1 {
             font-weight: bold;
+            text-align: center;
         }
         .orange {
             color: orange;
@@ -21,10 +21,17 @@
         .spacer {
             margin: 20px 0;
         }
-        .list-container {
-            display: inline-block;
+        .left-container {
             text-align: left;
-            width: 250px;
+            max-width: 300px;
+            margin-left: 50px;
+        }
+        .small-heading {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .list-container {
+            text-align: left;
         }
         .list-item {
             font-weight: bold;
@@ -73,36 +80,38 @@
     
     <div class="spacer"></div>
     
-    <h1>Co chcesz zrobić?</h1>
+    <div class="left-container">
+        <p class="small-heading">Co chcesz zrobić?</p>
     
-    <div class="list-container">
-        <div class="list-item" onclick="toggleItem('oferta', this)">
-            <span>Jakie są oferty?</span> <span>▶</span>
-        </div>
-        <div id="oferta" class="list-content">Mycie pojazdu</div>
-        <div class="separator"></div>
-
-        <div class="list-item" onclick="toggleItem('kontakt', this)">
-            <span>Jak się skontaktować?</span> <span>▶</span>
-        </div>
-        <div id="kontakt" class="list-content">
-            <p>Telefon: 123-456-789</p>
-            <div class="social-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                <a href="https://www.instagram.com/twojprofil" target="_blank">Instagram</a>
+        <div class="list-container">
+            <div class="list-item" onclick="toggleItem('oferta', this)">
+                <span>Jakie są oferty?</span> <span>▶</span>
             </div>
-            <div class="social-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-                <a href="https://www.facebook.com/twojprofil" target="_blank">Facebook</a>
-            </div>
-        </div>
-        <div class="separator"></div>
+            <div id="oferta" class="list-content">Mycie pojazdu</div>
+            <div class="separator"></div>
 
-        <div class="list-item" onclick="toggleItem('lokalizacja', this)">
-            <span>Gdzie jesteśmy?</span> <span>▶</span>
+            <div class="list-item" onclick="toggleItem('kontakt', this)">
+                <span>Jak się skontaktować?</span> <span>▶</span>
+            </div>
+            <div id="kontakt" class="list-content">
+                <p>Telefon: 123-456-789</p>
+                <div class="social-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                    <a href="https://www.instagram.com/twojprofil" target="_blank">Instagram</a>
+                </div>
+                <div class="social-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                    <a href="https://www.facebook.com/twojprofil" target="_blank">Facebook</a>
+                </div>
+            </div>
+            <div class="separator"></div>
+
+            <div class="list-item" onclick="toggleItem('lokalizacja', this)">
+                <span>Gdzie jesteśmy?</span> <span>▶</span>
+            </div>
+            <div id="lokalizacja" class="list-content">Adres: ul. Detailingowa 10</div>
+            <div class="separator"></div>
         </div>
-        <div id="lokalizacja" class="list-content">Adres: ul. Detailingowa 10</div>
-        <div class="separator"></div>
     </div>
 
     <script>
