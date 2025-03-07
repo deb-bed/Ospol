@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSPOL Detail</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-weight: bold;
+        }
+        .orange {
+            color: orange;
+        }
+        .spacer {
+            margin: 20px 0;
+        }
+        .list-container {
+            display: inline-block;
+            text-align: left;
+            width: 250px;
+        }
+        .list-item {
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5px;
+        }
+        .list-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .list-content {
+            display: none;
+            padding: 10px;
+            font-weight: normal;
+        }
+        .separator {
+            height: 1px;
+            background-color: gray;
+            margin: 5px 0;
+        }
+        .social-link {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .social-link img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .social-link a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .social-link a:hover {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Siema, z tej strony <span class="orange">OSPOL Detail</span>👊.</h1>
+    
+    <div class="spacer"></div>
+    
+    <h1>Co chcesz zrobić?</h1>
+    
+    <div class="list-container">
+        <div class="list-item" onclick="toggleItem('oferta', this)">
+            <span>Jakie są oferty?</span> <span>▶</span>
+        </div>
+        <div id="oferta" class="list-content">Mycie pojazdu</div>
+        <div class="separator"></div>
+
+        <div class="list-item" onclick="toggleItem('kontakt', this)">
+            <span>Jak się skontaktować?</span> <span>▶</span>
+        </div>
+        <div id="kontakt" class="list-content">
+            <p>Telefon: 123-456-789</p>
+            <div class="social-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                <a href="https://www.instagram.com/twojprofil" target="_blank">Instagram</a>
+            </div>
+            <div class="social-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                <a href="https://www.facebook.com/twojprofil" target="_blank">Facebook</a>
+            </div>
+        </div>
+        <div class="separator"></div>
+
+        <div class="list-item" onclick="toggleItem('lokalizacja', this)">
+            <span>Gdzie jesteśmy?</span> <span>▶</span>
+        </div>
+        <div id="lokalizacja" class="list-content">Adres: ul. Detailingowa 10</div>
+        <div class="separator"></div>
+    </div>
+
+    <script>
+        function toggleItem(id, element) {
+            var content = document.getElementById(id);
+            var icon = element.querySelector("span:last-child");
+
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                icon.innerHTML = "✖";
+            } else {
+                content.style.display = "none";
+                icon.innerHTML = "▶";
+            }
+        }
+    </script>
+
+</body>
+</html>
