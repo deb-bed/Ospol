@@ -15,18 +15,14 @@
         h1 {
             font-weight: bold;
             text-align: center;
-            margin-bottom: 50px; /* Większa przerwa pod nagłówkiem */
+            margin-bottom: 50px;
         }
         .orange {
             color: #FF5F1F;
         }
-        .spacer {
-            margin: 20px 0;
-        }
         .left-container {
             text-align: left;
             max-width: 300px;
-            margin: 0;
             padding-left: 10px;
         }
         .small-heading {
@@ -94,9 +90,11 @@
             <div class="list-item" onclick="toggleItem('oferta', this)">
                 <span>Jakie są oferty i jaka jest ich cena?</span> <span>▶</span>
             </div>
-            <div id="oferta" class="list-content">1. Precyzyjne czyszczenie wnętrza-50 zł</div>
-            <div id="oferta" class="list-content">2. Szczegółowe mycie karoserii-70 zł</div>
-            <div id="oferta" class="list-content">3. Opcja duo-100 zł</div>
+            <div id="oferta" class="list-content">
+                <p>1. Precyzyjne czyszczenie wnętrza - 50 zł</p>
+                <p>2. Szczegółowe mycie karoserii - 70 zł</p>
+                <p>3. Opcja duo - 100 zł</p>
+            </div>
             <div class="separator"></div>
 
             <div class="list-item" onclick="toggleItem('kontakt', this)">
@@ -131,12 +129,15 @@
                     <img src="https://i.imgur.com/H3mwNRG.jpeg" alt="g">
                 </div>
             </div>
-            <div class="separator"></div>
-            
+            <div class="separator"></div>  
+
             <div class="list-item" onclick="toggleItem('onas', this)">
-            <span>O nas</span> <span>▶</span> 
-                <div id="onas" class="list-content">Jesteśmy dwójką chłopaków, którzy lubią precyzyjnie czyścić samochody. Oczywiście wszystkiego się szkolimy cały czas, ale nasze usługi są zawsze wykonane w jak najlepszy możliwy przez nas sposób.</div>
-            <div class="separator"></div>
+                <span>O nas</span> <span>▶</span>
+            </div>
+            <div id="onas" class="list-content">
+                <p>OSPOL Detail to ekipa zajmująca się profesjonalnym detailingiem aut. Dbamy o czystość i wygląd twojego samochodu jak o własny.</p>
+            </div>
+            <div class="separator"></div>  
         </div>
     </div>
 
